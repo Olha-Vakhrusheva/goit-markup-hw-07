@@ -1,0 +1,91 @@
+.team-works {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.project-name-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+
+  color: var(--primary-text-color);
+  border-color: rgba(238, 238, 238, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-text {
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  line-height: 1.56;
+  text-align: left;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.project-link:hover .card-text,
+.project-link:focus .card-text {
+  pointer-events: auto;
+  transform: translateY(-100%);
+}
+
+.project-link:hover .text-project,
+.project-link:focus .text-project {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), -0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.team-works {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-name-list > .project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.project-name-list {
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.03em;
+}
+
+.text-project {
+  padding: 20px 24px;
+  border-width: 1px;
+  border-color: rgba(238, 238, 238, 1);
+  border-style: solid;
+  border-top: 0;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-name {
+  color: var(--title-text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}

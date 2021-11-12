@@ -1,0 +1,29 @@
+:root {
+  --logo-accent-color: #2196f3;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --primary-white-color: #ffffff;
+  --contact-footer: rgba(255, 255, 255, 0.6);
+  --button-color: #f5f4fa;
+  --footer-color: #2f303a;
+  --footer-background-color: #2f303a;
+
+  --main-font-size: 14px;
+}
+
+@mixin header-font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+
+
+
+color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
