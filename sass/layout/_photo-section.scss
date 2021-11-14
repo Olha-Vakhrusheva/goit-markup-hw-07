@@ -22,10 +22,10 @@
 
   height: 70px;
   width: 100%;
-  background-color: rgba(47, 48, 58, 0.8);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--background-color-photo);
+  box-shadow: 0px 4px 4px var(--shadow-photo);
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 1);
+  border-color: var(--border-color);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   font-weight: 700;
@@ -37,12 +37,10 @@
 }
 
 .header-text {
+  @include font();
   margin-bottom: 50px;
 
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }

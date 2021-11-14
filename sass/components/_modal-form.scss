@@ -42,6 +42,15 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus ~ .modal-icon {
+    fill: var(--logo-accent-color);
+  }
+
+  &:focus {
+    border-color: var(--logo-accent-color);
+    outline: none;
+  }
 }
 
 .modal-form-wrapper {
@@ -58,16 +67,15 @@
   justify-content: center;
 
   margin-left: 12px;
-}
 
-.modal-form-input:focus ~ .modal-icon {
-  fill: var(--logo-accent-color);
-}
-
-.modal-form-input:focus,
-.comment:focus {
-  border-color: var(--logo-accent-color);
-  outline: none;
+  &:checked + .agreement-text::before {
+    background-image: url(../images5/icon-check.svg);
+    background-color: var(--logo-accent-color);
+    border-color: var(--logo-accent-color);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
 }
 
 .modal-icon {
@@ -89,6 +97,11 @@
   color: rgba(117, 117, 117, 0.5);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: var(--logo-accent-color);
+    outline: none;
+  }
 }
 
 form textarea {
@@ -98,11 +111,11 @@ form textarea {
   border-radius: 4px;
   resize: none;
   height: 120px;
-}
 
-form textarea:focus {
-  outline: none;
-  border-color: var(--logo-accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--logo-accent-color);
+  }
 }
 
 .comment-label {
@@ -111,34 +124,10 @@ form textarea:focus {
 
 .text-comment {
   padding: 12px 16px;
-}
 
-.text-comment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.agreement-text::before {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid #303030;
-  cursor: pointer;
-  border-radius: 2px;
-  margin-right: 7px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox:checked + .agreement-text::before {
-  background-image: url(../images5/icon-check.svg);
-  background-color: var(--logo-accent-color);
-  border-color: var(--logo-accent-color);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: contain;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .checkbox-agreement:hover .agreement-text::before,
@@ -159,6 +148,21 @@ form textarea:focus {
   justify-content: center;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #303030;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 7px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .checkbox-agreement {
@@ -186,7 +190,7 @@ form textarea:focus {
 
   background-color: var(--logo-accent-color);
   color: var(--primary-white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--shadow-photo);
   border-radius: 4px;
   border: none;
 
@@ -197,9 +201,9 @@ form textarea:focus {
   letter-spacing: 0.06em;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.submit-btn:hover,
-.submit-btn:focus {
-  background-color: #188ce8;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }

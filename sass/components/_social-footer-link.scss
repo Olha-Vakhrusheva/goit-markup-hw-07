@@ -11,14 +11,14 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--logo-accent-color);
+  }
 }
 .social-footer-icon {
   fill: var(--primary-white-color);
   justify-content: center;
   align-items: center;
-}
-
-.social-footer-link:hover,
-.social-footer-link:focus {
-  background-color: var(--logo-accent-color);
 }

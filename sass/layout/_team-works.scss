@@ -15,8 +15,19 @@
   text-decoration: none;
 
   color: var(--primary-text-color);
-  border-color: rgba(238, 238, 238, 1);
+  border-color: var(--card-link-border-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover .card-text,
+  &:focus .card-text {
+    pointer-events: auto;
+    transform: translateY(-100%);
+  }
+
+  &:hover .text-project,
+  &:focus .text-project {
+    box-shadow: var(--box-shadow-card);
+  }
 }
 
 .card-text {
@@ -29,7 +40,7 @@
   justify-content: center;
   font-size: 18px;
   color: var(--primary-white-color);
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--logo-accent-color);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -38,18 +49,6 @@
   position: relative;
   display: flex;
   overflow: hidden;
-}
-
-.project-link:hover .card-text,
-.project-link:focus .card-text {
-  pointer-events: auto;
-  transform: translateY(-100%);
-}
-
-.project-link:hover .text-project,
-.project-link:focus .text-project {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), -0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .team-works {
@@ -75,7 +74,7 @@
 .text-project {
   padding: 20px 24px;
   border-width: 1px;
-  border-color: rgba(238, 238, 238, 1);
+  border-color: var(--card-link-border-color);
   border-style: solid;
   border-top: 0;
 

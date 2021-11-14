@@ -4,7 +4,7 @@ header {
   left: 0;
   width: 100%;
   background-color: var(--primary-white-color);
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--background-color-header);
   z-index: 1;
 }
 .header {
@@ -12,13 +12,13 @@ header {
   align-items: center;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   margin-right: auto;
 }
 
-.header-list {
+.header__list {
   display: flex;
   margin-left: 93px;
 
@@ -29,15 +29,15 @@ header {
   letter-spacing: 0.02em;
 }
 
-.header-item {
+.header__item {
   text-decoration: none;
 }
 
-.header-item + .header-item {
+.header__item + .header__item {
   margin-left: 50px;
 }
 
-.header-link {
+.header__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -47,18 +47,14 @@ header {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--logo-accent-color);
+  }
 }
 
-.header-link:hover,
-.header-link:focus,
-.contact-footer:hover,
-.contact-footer:focus,
-.icon:hover,
-.icon:focus {
-  color: var(--logo-accent-color);
-}
-
-.header-current {
+.header__link--current {
   display: block;
   position: relative;
   padding-top: 32px;
@@ -67,15 +63,47 @@ header {
   color: var(--logo-accent-color);
   text-decoration: none;
   text-decoration: none;
+
+  &::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: rgba(33, 150, 243, 1);
+    border-radius: 2px;
+    top: 84px;
+    left: 0;
+  }
 }
 
-.header-current::after {
-  position: absolute;
-  content: " ";
-  width: 100%;
-  height: 4px;
-  background-color: rgba(33, 150, 243, 1);
-  border-radius: 2px;
-  top: 84px;
-  left: 0;
+.header__contact {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+
+  color: var(--primary-text-color);
+  text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--logo-accent-color);
+  }
+
+  &:hover .header__icon,
+  &:focus .header__icon {
+    fill: var(--logo-accent-color);
+  }
+}
+
+.header__icon {
+  fill: currentColor;
+  vertical-align: middle;
+  margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
